@@ -1,0 +1,55 @@
+<view class="main">
+    <view class="header">
+       <view style="width:90%;margin:0 auto">
+           <view class="touxiang">
+            <image src="{{avatarUrl}}" class="touxiangImg"></image>
+            </view>
+            <view class="loginTxt" wx:if="{{!isLogin}}">
+                <button class="diaDismissBtn" open-type="getUserInfo" bindgetuserinfo="loginIn">登录/注册</button>
+                <text>您还没有登录哦~</text>
+            </view>
+            <view style="vertical-align:middle;margin-top:20px;font-size:14px;" wx:else>
+              <text style="padding-left:20px">{{nickName}}</text>
+            </view>
+       </view>
+    </view>
+    <view>
+       <view class="menu">
+        <view class="detaiList" bindtap="getHaibao">
+          <image src="/images/haibao.png" mode="widthFix" style="width:18px" class="coverImg"></image>
+          <text class="subject">我的专属海报</text>
+          <image src="/images/gengduo.png" mode="widthFix" style="width:7px;" class="more"></image>
+          <text class="subject1">点击生成海报</text>
+          
+        </view>
+        <view class="detaiList" bindtap="getHistory">
+          <image src="/images/haibao.png" mode="widthFix" style="width:18px" class="coverImg"></image>
+          <text class="subject">收听历史</text>
+          <image src="/images/gengduo.png" mode="widthFix" style="width:7px;" class="more"></image>
+        </view>
+        <view class="detaiList" bindtap="getCollection">
+          <image src="/images/haibao.png" mode="widthFix" style="width:18px" class="coverImg"></image>
+          <text class="subject">我的收藏</text>
+          <image src="/images/gengduo.png" mode="widthFix" style="width:7px;" class="more"></image>
+        </view>
+        <view class="detaiList" bindtap="getRecord">
+          <image src="/images/haibao.png" mode="widthFix" style="width:18px" class="coverImg"></image>
+          <text class="subject">我的录音</text>
+          <image src="/images/gengduo.png" mode="widthFix" style="width:7px;" class="more"></image>
+        </view>
+        <view class="detaiList" bindtap='getFeedBack'>
+          <image src="/images/haibao.png" mode="widthFix" style="width:18px" class="coverImg"></image>
+          <text class="subject">反馈建议</text>
+          <image src="/images/gengduo.png" mode="widthFix" style="width:7px;" class="more"></image>
+        </view>
+      </view>
+    </view>
+    <view class="haibaoWrapper" hidden="{{!hiddenCanvas}}">
+        <canvas canvas-id='canone' disable-scroll="false"></canvas>
+        <view style="position:absolute;bottom:0;width:100%;display:flex;margin-bottom:20px">
+            <button class="cancle" style="width:30%;" bindtap="cancle">取消</button>
+            <button class="save" style="width:30%;background:#ff9900;color:#fff" bindtap="save">保存</button>
+        </view>
+    </view>
+
+</view>

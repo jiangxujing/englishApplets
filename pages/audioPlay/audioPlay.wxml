@@ -1,0 +1,40 @@
+<view class="audioBg" style="background:url(/images/pageBackPic.png);background-size:100% 100%;width:100%;height:100%;">
+  <view class="fengmian" bindtap="openLyrics" wx:if="{{lyricShow}}">
+     <image class="imageBg" src="/images/audioImgBack.png"></image>
+     <image class="fengmianImg" src="{{audioObj.logoUrl}}"></image>
+     <text class="yiwen">点击封面查看译文</text>
+  <view class="songName">
+      <text>{{audioObj.englishName}}</text>
+      <text>{{audioObj.name}}</text>
+  </view>
+  </view>
+  <view wx:else class="lyrics" bindtap="closeLyrics">
+    <view class="songName">
+      <text>{{audioObj.englishName}}</text>
+      <text>{{audioObj.name}}</text>
+    </view>
+   <view class="geci">
+       <block wx:for='{{contentText}}' class="">
+        <text style="font-size:17px;">
+            {{item}}
+        </text>
+      </block>
+   </view>
+  </view>
+
+  <view class="songInfo">
+     <slider bindchange="slider4change" block-size="12" min="0" max="100" backgroundColor="#ffde00" activeColor="#fff" value="{{slider1}}"/>
+     <text class="beginTime">{{currentTime}}</text>
+     <text class="endTime">{{time}}</text>
+    <view class="iconImg" style="clear:both">
+       <image src="{{loop?'/images/singalPaly.png':'/images/circulatePlay.png'}}" class="singalPaly" bindtap="loop"></image>
+        <image src="/images/returnIcon.png" class="returnIcon" bindtap="prevSong"></image>
+         <image src="/images/play.png" class="play" bindtap="audioPlay" hidden="{{hiddenName}}"></image>
+          <image src="/images/playing.png" class="play" bindtap="audioPause" hidden="{{!hiddenName}}"></image>
+          <image src="/images/nextIcon.png" class="nextIcon" bindtap="nextSong"></image>
+           <image src="/images/unCollection.png" class="unCollection" hidden="{{noLike}}" bindtap="like"></image>
+          <image src="/images/alreadyCollection.png" class="unCollection" hidden="{{!noLike}}" bindtap="noLike"></image>
+           
+    </view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+<view class="feedBack">
+  <view class="textsArea">
+  <textarea bindblur="bindTextAreaBlur" auto-height placeholder="感谢您使用小海鸥英语,使用过程中有任何意见或建议请反馈我们！(限制300字以内)" maxlength="300" bindinput="getInputNumer"/>
+  </view>
+ <view style="overflow:hidden">
+  <text style="float:right;margin-right:20px;margin-top:20px">{{number}}/300</text>
+ </view>
+  <button bindtap="submit" class="subBtn {{feedAcitve?'active':''}}">提交</button>
+</view>

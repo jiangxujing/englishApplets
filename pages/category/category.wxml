@@ -1,0 +1,4 @@
+<view style="text-align:center;margin-top:20px;">
+<image src="/images/blockCategory.png" mode="widthFix" style="width:120px"></image>
+<text style="display:block;margin-top:10px;color:#ffab24">敬请期待。。。</text>
+</view>

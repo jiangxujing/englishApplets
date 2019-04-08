@@ -1,0 +1,60 @@
+{
+"pages": [
+  "pages/index/index",
+  "pages/collection/collection",
+  "pages/wordCard/wordCard",
+  "pages/mine/mine",
+  "pages/baseWord/baseWord",
+   "pages/audioPlay/audioPlay",
+   "pages/chilrenEnglish/chilrenEnglish",
+    "pages/record/record",
+    "pages/category/category",
+    "pages/listenHistory/listenHistory",
+    "pages/feedBack/feedBack"
+   
+],
+  "window": {
+    "navigationBarTitleText": "fffDemo"
+  },
+  "tabBar": {
+          "color":"#333",
+          "selectedColor": "#FF582D",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"images/homeNormal.png",
+        "selectedIconPath":"images/homeSelected.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "课程分类",
+        "color": "#FF582D",
+        "iconPath": "images/homeNormal.png",
+        "selectedIconPath": "images/homeSelected.png"
+      },
+        {
+        "pagePath": "pages/record/record",
+          "text": "录音",
+          "color": "#FF582D",
+          "iconPath": "images/homeNormal.png",
+          "selectedIconPath": "images/homeSelected.png"
+        },
+        {
+          "pagePath": "pages/mine/mine",
+          "text": "我的",
+          "color": "#FF582D",
+          "iconPath": "images/homeNormal.png",
+          "selectedIconPath": "images/homeSelected.png"
+        }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "navigateToMiniProgramAppIdList": [
+    "wxe5f52902cf4de896"
+  ]
+}

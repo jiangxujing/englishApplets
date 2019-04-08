@@ -1,0 +1,96 @@
+/**index.wxss**/
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.banner{
+  width:100%;
+}
+.slide-image{
+  width:100%;
+  height:100%;
+}
+.section__ctn{
+  width:100%;
+  padding-top:20px;
+  overflow:hidden;
+   display:flex;
+}
+.yousheng{
+  flex:1;
+  text-align: center;
+  font-size:14px;
+  color:#333;
+}
+.section__ctn image{
+  height:64px;
+  width:64px;
+}
+.hot{
+  width:96%;
+  height:auto;
+  background: #fff;
+  margin:0 auto;
+  margin-top:20px;
+  border-radius:10px;
+  overflow:hidden;
+  padding-bottom:10px
+
+}
+.hot .leftimg{
+  float:left;
+  margin-left:16px;
+}
+.hot .righttxt{
+  float:left;
+  width:50%;
+  margin-left:10px;
+  font-size:14px;
+}
+.righttxt text{
+  display:block
+}
+.righttxt .time{
+  color:#999999;
+  float:left;
+  margin-right:10px;
+
+}
+.righttxt .number{
+  color:#999999;
+   float:left;
+  }
+  .hotborder{
+    border-bottom:1px solid #eee;
+    overflow:hidden;
+    padding-bottom:10px;
+  }
+  @-webkit-keyframes rotation{
+from {-webkit-transform: rotate(0deg);}
+to {-webkit-transform: rotate(360deg);}
+}
+
+.dongtu{
+-webkit-transform: rotate(360deg);
+animation: rotation 3s linear infinite;
+-moz-animation: rotation 3s linear infinite;
+-webkit-animation: rotation 3s linear infinite;
+-o-animation: rotation 3s linear infinite;
+}

@@ -1,0 +1,16 @@
+<view class="wordCardBg">
+    <view class="wordInfo">
+        <image src="/images/fanyelast.png" class="fanyelast"  bindtap="prevLetter" data-categoryId="{{letterInfo.categoryId}}" data-displayOrder="{{letterInfo.displayOrder}}"></image>
+        <view class="wordCard">
+         <image bindtap="collectionTap" data-id="{{letterInfo.id}}" src="{{collectionShow || letterInfo.isFavorite>0?'/images/cardCollected.png':'/images/cardCollect.png'}}" mode="widthFix" style="width:20px;" class="collection"></image>
+            <image src="{{letterInfo.pictureUrl}}" mode="widthFix"></image>
+        </view>
+         <image src="/images/fanyenext.png" class="fanyenext"  bindtap="nextLetter" data-categoryId="{{letterInfo.categoryId}}" data-displayOrder="{{letterInfo.displayOrder}}"></image>
+    </view>
+    <view style="text-align:center;">
+      <image src="/images/myluyin.png" mode="widthFix" style="width:80px;" bindtap="playFun"></image>
+      <image src="/images/myRecordIcon.png" mode="widthFix" style="width:80px;" bindtap="recordingFun" wx:if="{{isRecordShow}}"></image>
+      <image src="/images/record.png" mode="widthFix" style="width:80px;" bindtap="endRecordingFun" wx:else></image>
+      <image src="/images/unbofang.png" mode="widthFix" style="width:80px;" bindtap="reRecordingFun"></image>
+    </view>
+</view>

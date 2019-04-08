@@ -1,0 +1,40 @@
+
+.hot{
+  width:96%;
+  height:auto;
+  background: #fff;
+  margin:0 auto;
+  margin-top:20px;
+  border-radius:10px;
+  overflow:hidden;
+  padding-bottom:10px
+
+}
+.hot .leftimg{
+  float:left;
+  margin-left:16px;
+}
+.hot .righttxt{
+  float:left;
+  width:50%;
+  margin-left:10px;
+  font-size:14px;
+}
+.righttxt text{
+  display:block
+}
+.righttxt .time{
+  color:#999999;
+  float:left;
+  margin-right:10px;
+
+}
+.righttxt .number{
+  color:#999999;
+   float:left;
+  }
+  .hotborder{
+    border-bottom:1px solid #eee;
+    overflow:hidden;
+    padding-bottom:10px;
+  }

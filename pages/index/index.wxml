@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view>
+      <image class="banner" src="/images/banner.png"></image>
+  </view> -->
+    <swiper
+        indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+        interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+        <view wx:for="{{imgUrls}}">
+           <swiper-item>
+            <image src="{{item.pictureUrl}}" class="slide-image"/>
+          </swiper-item>
+        </view>
+      </swiper>
+      <view style="background:#fff;padding-bottom:20px;">
+            <view class="section__ctn">
+              <view class="yousheng" wx:for="{{fieldList}}" >
+                 <image
+                mode="{{mode}}"
+                src="{{item.logoUrl}}"
+                bindtap="goLetter" data-id="{{item.id}}"
+                data-type="{{item.type}}"
+                data-name="{{item.name}}"
+              ></image>
+                <text style="display:block">{{item.name}}</text>
+              </view>
+            </view>
+      </view>
+      <view class="hot">
+             <text style="font-size:22px;color:#333;padding:20px 0 20px 10px;display:block">热门精选</text>
+              <view class="hotborder" wx:for="{{hotList}}" wx:for-item="itemName">
+                  <image class="leftimg" src="{{itemName.pictureUrl}}" mode="scaleToFill" style="width:100px;height:100px;"             bindtap="getAudioDetail" data-id="{{itemName.id}}"/>
+                    <view class="righttxt">
+                        <text>{{itemName.englishName}}</text>
+                        <text>{{itemName.name}}</text>
+                       <view style="margin-top:20px;">
+                             <view class="time"><image src="/images/shijian.png" style="width:10px;height:10px;"></image>4:27</view>
+                             <view class="number"><image src="/images/erji.png" style="width:10px;height:10px;"></image>1307</view>
+                       </view>
+                    </view>
+              </view>
+      </view>
+      <view style="position:fixed;top:80%;right:10px;">
+        <image src="/images/floatBtn.png" style="width:40px;height:40px;" class="dongtu"></image>
+      </view>
+      <view class="rowView diaBtnView" wx:if="{{!isLogin}}">
+        <button class="diaDismissBtn" open-type="getUserInfo" bindgetuserinfo="loginIn">确认</button>
+      </view> 
+   <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>  -->
+ <!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+</view>

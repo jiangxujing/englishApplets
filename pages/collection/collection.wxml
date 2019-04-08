@@ -1,0 +1,54 @@
+<view style="width:100%;height:100%;background:#F9F5E6">
+  <view class="headerTab">
+    <view bindtap='chooseItem' data-id="0">
+      <text class="{{carshow?'active':''}}">卡片学习</text>
+      <view class="borderBottom" wx:if="{{carshow}}"></view>
+    </view>
+    <view bindtap='chooseItem' data-id="1">
+      <text class="{{!carshow?'active':''}}">儿歌故事</text>
+      <view class="borderBottom" wx:if="{{!carshow}}"></view>
+    </view>
+  </view>
+  <view class="mainContent">
+    <swiper style='width:100%; height:100%' current="{{currentIndex}}">
+      <swiper-item>
+        <scroll-view scroll-x="false" scroll-y="true" class="cardContent">
+              <view wx:if="{{cardList.length>0}}" style="overflow:hidden;padding:0 10px">
+                     <image  wx:for="{{cardList}}" src="{{item.pictureUrl}}" style="width:120px;float:left;" mode="widthFix" bindtap="getCardDetail" data-id="{{item.id}}" data-name="{{item.name}}"></image>
+              </view>
+              <view wx:else>
+            <image src="/images/card_blockview.png" mode="widthFix" style="width:40px;margin-top:30px;"></image>
+            <view style="font-size:14px;color:#A1A09F;">您还没有任何收藏哦</view>
+            <view style="font-size:14px;">去“首页发现精彩”</view>
+            <button class="btn">发现精彩</button>
+          </view>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item>
+        <scroll-view scroll-x="false" scroll-y="true" class="songContent">
+        <view class="hot" wx:if="{{audioList.length>0}}">
+            <view class="hotborder" wx:for="{{audioList}}" wx:for-item="itemName">
+              <image class="leftimg" src="{{itemName.logoUrl}}" mode="scaleToFill" style="width:100px;height:100px;" bindtap="getAudioDetail" data-id="{{itemName.id}}" />
+              <view class="righttxt">
+                <text>{{itemName.englishName}}</text>
+                <text>{{itemName.name}}</text>
+                <view style="margin-top:20px;">
+                  <view class="time">
+                    <image src="/images/shijian.png" style="width:10px;height:10px;"></image>4:27</view>
+                  <view class="number">
+                    <image src="/images/erji.png" style="width:10px;height:10px;"></image>1307</view>
+                </view>
+              </view>
+            </view>
+          </view>
+         <view wx:else>
+          <image src="/images/erji_blockview.png" mode="widthFix" style="width:40px;margin-top:30px;"></image>
+          <view style="font-size:14px;color:#A1A09F;">您还没有任何收藏哦</view>
+          <view style="font-size:14px;">去“首页发现精彩”</view>
+          <button class="btn">发现精彩</button>
+         </view>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

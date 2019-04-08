@@ -1,0 +1,13 @@
+<view class="hot">
+  <view class="hotborder" wx:for="{{englishList}}" wx:for-item="itemName">
+      <image class="leftimg" src="{{itemName.logoUrl}}" mode="scaleToFill" style="width:100px;height:100px;"                                  bindtap="getAudioDetail" data-id="{{itemName.id}}"/>
+        <view class="righttxt">
+            <text>{{itemName.englishName}}</text>
+            <text>{{itemName.name}}</text>
+            <view style="margin-top:20px;">
+                  <view class="time"><image src="/images/shijian.png" style="width:10px;height:10px;"></image>4:27</view>
+                  <view class="number"><image src="/images/erji.png" style="width:10px;height:10px;"></image>1307</view>
+            </view>
+        </view>
+  </view>
+</view>
