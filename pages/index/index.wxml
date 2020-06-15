@@ -1,8 +1,8 @@
 <!--index.wxml-->
 <view class="container">
-  <!-- <view>
-      <image class="banner" src="/images/banner.png"></image>
-  </view> -->
+  <view class="containerBg">
+   
+  </view>
     <swiper
         indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
         interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">

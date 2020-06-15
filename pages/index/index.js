@@ -11,10 +11,14 @@ Page({
     isLogin:false
   },
   onLoad(options) {
+    console.log('嘻嘻')
     if (!wx.getStorageSync("isLogin")){
-      console.log('gg')
       this.setData({
         isLogin: false
+      });
+    }else{
+      this.setData({
+        isLogin: true
       });
     }
   },

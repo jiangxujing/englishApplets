@@ -164,7 +164,7 @@ Page({
     })
     innerAudioContext.onPlay(()=>{
       console.log('执行没有')
-      innerAudioContext.currentTime
+      innerAudioContext.currentTime //不加的话进度更新方法不执行，timeupdata方法必须在这里调用，否则，暂停后播放，
       this.Initialization()
     })
   },

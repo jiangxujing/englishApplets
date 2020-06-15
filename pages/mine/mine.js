@@ -15,6 +15,7 @@ Page({
     hiddenCanvas:false
   },
   onLoad(options) {
+    console.log('执行了么')
     const value = wx.getStorageSync('userInfo')
         if (value) {
           this.setData({
@@ -23,9 +24,9 @@ Page({
             isLogin:true
           })
         }
-    wx.showShareMenu({
-      withShareTicket: true
-    })
+    // wx.showShareMenu({
+    //   withShareTicket: true
+    // })
         },
   cancle(){
     this.setData({
@@ -223,6 +224,7 @@ Page({
             })
             wx.setStorageSync("userInfo", res.userInfo)
             wx.setStorageSync("isLogin", that.data.isLogin)
+            wx.setStorageSync("code", code)
             var _this = this
             let req = {
               avatarUrl: resObj.avatarUrl,

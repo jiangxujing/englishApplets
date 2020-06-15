@@ -25,7 +25,6 @@
 }
 .righttxt .time{
   color:#999999;
-  float:left;
   margin-right:10px;
 
 }

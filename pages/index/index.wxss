@@ -1,5 +1,7 @@
 /**index.wxss**/
-
+.containerBg{
+  background: url()
+}
 .userinfo {
   display: flex;
   flex-direction: column;

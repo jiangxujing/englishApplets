@@ -1,30 +1,29 @@
 {
-"pages": [
-  "pages/index/index",
-  "pages/collection/collection",
-  "pages/wordCard/wordCard",
-  "pages/mine/mine",
-  "pages/baseWord/baseWord",
-   "pages/audioPlay/audioPlay",
-   "pages/chilrenEnglish/chilrenEnglish",
+  "pages": [
+    "pages/index/index",
+    "pages/collection/collection",
+    "pages/wordCard/wordCard",
+    "pages/mine/mine",
+    "pages/baseWord/baseWord",
+    "pages/audioPlay/audioPlay",
+    "pages/chilrenEnglish/chilrenEnglish",
     "pages/record/record",
     "pages/category/category",
     "pages/listenHistory/listenHistory",
     "pages/feedBack/feedBack"
-   
-],
+  ],
   "window": {
     "navigationBarTitleText": "fffDemo"
   },
   "tabBar": {
-          "color":"#333",
-          "selectedColor": "#FF582D",
+    "color": "#333",
+    "selectedColor": "#FF582D",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath":"images/homeNormal.png",
-        "selectedIconPath":"images/homeSelected.png"
+        "iconPath": "images/homeNormal.png",
+        "selectedIconPath": "images/homeSelected.png"
       },
       {
         "pagePath": "pages/category/category",
@@ -33,20 +32,20 @@
         "iconPath": "images/homeNormal.png",
         "selectedIconPath": "images/homeSelected.png"
       },
-        {
+      {
         "pagePath": "pages/record/record",
-          "text": "录音",
-          "color": "#FF582D",
-          "iconPath": "images/homeNormal.png",
-          "selectedIconPath": "images/homeSelected.png"
-        },
-        {
-          "pagePath": "pages/mine/mine",
-          "text": "我的",
-          "color": "#FF582D",
-          "iconPath": "images/homeNormal.png",
-          "selectedIconPath": "images/homeSelected.png"
-        }
+        "text": "录音",
+        "color": "#FF582D",
+        "iconPath": "images/homeNormal.png",
+        "selectedIconPath": "images/homeSelected.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "color": "#FF582D",
+        "iconPath": "images/homeNormal.png",
+        "selectedIconPath": "images/homeSelected.png"
+      }
     ]
   },
   "networkTimeout": {
@@ -56,5 +55,6 @@
   "debug": true,
   "navigateToMiniProgramAppIdList": [
     "wxe5f52902cf4de896"
-  ]
+  ],
+  "sitemapLocation": "sitemap.json"
 }
